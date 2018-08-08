@@ -1,0 +1,82 @@
+<html>
+<head>
+
+<script type="text/javascript" >
+
+function sort1(arr){
+	for(var i=0;i<arr.length;i++){
+		for(var j=0;j<arr.length-i-1;j++){
+			if(arr[j]>arr[j+1]){
+				var tmp=arr[j];
+				arr[j]=arr[j+1];
+				arr[j+1]=tmp;
+			}
+		}
+	}
+}
+function sort2(arr){
+	var flag=true;
+	do{
+		flag=false;
+		for(var j=arr.length-1;j>=1;j--){
+		
+			if(arr[j]<arr[j-1]){
+				var tmp=arr[j];
+				arr[j]=arr[j-1];
+				arr[j-1]=tmp;
+				flag=true;
+			}
+			
+		}
+	
+	
+	}while(flag);
+
+}
+
+function quickSort(arr,start,end){
+	
+	if(start<end){
+		var i=start;
+		var j=end;
+		var base=arr[i];
+		
+		do{
+		
+		
+			while((base>arr[i])&&(i<end))i++;
+			
+			while((arr[j]>base)&&(j>start)) j--;
+		
+			if(i<=j){
+				var tmp=arr[i];
+				arr[i]=arr[j];
+				arr[j]=tmp; 
+				i++;
+				j--;
+			}
+		}while(i<=j);
+		
+		
+		if(i<end) quickSort(arr,i,end);
+		
+		if(j>start) quickSort(arr,start,j);
+
+	
+	
+	}
+
+
+}
+
+var arr=[-99,1,-9,-11,2,5,7,9,8,2,-1,0,-88]
+alert("before:"+arr)
+//sort2(arr)
+quickSort(arr,0,arr.length-1)
+alert("after:"+arr)
+</script>
+</head>
+<body>
+
+</body>
+</html>
