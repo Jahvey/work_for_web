@@ -1,0 +1,54 @@
+<html>
+<head>
+
+<script type="text/javascript"  >
+
+function quickSort(arr,start,end){
+
+	if(start<end){
+		var base=arr[start];
+		var i=start;
+		var j=end;
+
+		do{
+			while((base>arr[i])&&(i<end)) i++;
+		
+			while((base<arr[j])&&(j>start))j--;
+		
+			if(i<=j){
+			
+				var tmp=arr[i];
+				arr[i]=arr[j];
+				arr[j]=tmp;
+				i++;
+				j--;
+			}
+		
+		}while(i<=j);
+		
+		
+		if(i<end) quickSort(arr,i,end);
+		
+		if(j>start) quickSort(arr,start,j);
+	
+	}
+
+}
+
+
+var arr=[-9,-11,10,9,6,5,4,3,2,1,0,8,99,-110];
+alert(arr);
+
+quickSort(arr,0,arr.length-1);
+alert(arr);
+
+
+</script>
+
+</head>
+<body></body>
+
+
+</html>
+
+
