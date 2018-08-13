@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+    <constant name="struts.enable.DynamicMethodInvocation" value="true" />
+    <constant name="struts.devMode" value="true" />
+    
+    <!-- 修改Struts2的常量的值 -->
+	<constant name="struts.action.extension" value="do"/>
+
+    <package name="default" namespace="/" extends="struts-default">
+    <!-- 配置action  -->
+		<action name="strutsDemo1" class="com.adonai.struts2.demo.test.Struts2Demo1">
+			<!-- 配置结果页面的跳转 -->
+			<result name="success">result.jsp</result>
+		</action>
+		
+		
+		<action name="saveCustomerAction" class="com.adonai.struts2.demo.test.CustomerAction" method="save"></action>
+		<action name="updateCustomerAction" class="com.adonai.struts2.demo.test.CustomerAction" method="update"></action>
+		<action name="deleteCustomerAction" class="com.adonai.struts2.demo.test.CustomerAction" method="delete"></action>
+		<action name="findCustomerAction" class="com.adonai.struts2.demo.test.CustomerAction" method="find"></action>
+    
+    <!-- 通配符的配置 -->
+	<action name="linkman_*" class="com.adonai.struts2.demo.test.LinkManAction" method="{1}"></action>
+    
+    
+    <!-- 动态方法访问的配置 -->
+<action name="userAction" class="com.adonai.struts2.demo.test.User"></action>
+    
+    </package>
+    
+	
+</struts>
