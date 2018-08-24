@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+	function createAjax(){
+		var ajax=null;
+		try {
+			//W3C标准浏览器
+			ajax = new XMLHttpRequest();	
+		} catch (e) {
+			ajax = new ActiveXObject("Microsoft.XMLHTTP");
+		}
+		return ajax;
+	}
+
+	//用户名输入完毕后(失去焦点)进行验证.
+	function checkUserName(){
+		var username = document.getElementById("username").value;
+		
+		//创建ajax对象
+		var ajax = createAjax();
+
+		//创建http请求
+		ajax.open("POST","/CheckUserNameServlet",true);
+		
+		//监听请求状态
+		ajax.onreadystatechange=function(){
+			if(ajax.readyState==4 && ajax.status==200){
+				var result = ajax.responseText;
+				var msg = document.getElementById("msg");
+				if(result==1){
+					msg.innerHTML = "<b style='color:blue'>恭喜你,用户名可用</b>";
+				}else{
+					msg.innerHTML = "<b style='color:yellow'>恭喜你,用户名不可用</b>";
+				}
+			}
+		}
+		
+		//设置请求内容类型
+		ajax.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+		//发送htt请求
+		ajax.send("name="+username);
+		//alert(ajax.responseText);//ajax是异步调用,send方法不会等到响应完毕后.
+	}
+</script>
+</head>
+<body>
+	<form action="/user_save.action" method="post">
+		用户名:<input type="text" name="username" onblur="checkUserName()" id="username"/>
+			<span id="msg"></span>
+		<br/>
+		密&emsp;码<input type="password" name="password"/><br/>
+		<input type="submit" value="提交 "/>
+	</form>
+</body>
+</html>

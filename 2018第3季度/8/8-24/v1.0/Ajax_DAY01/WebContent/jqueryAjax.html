@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>jqueryAjax</title>
+<script type="text/javascript" src="/jquery-1.11.0.js"></script>
+<script type="text/javascript">
+	function ajaxJqueryGET(){
+		//jQuery.get(url, [data], [callback], [type])//通过ajax发送一个get请求
+		
+		//参数1:url ajax请求地址,地址可用添加多个参数. [必填]
+		//参数2:data 请求参数,参数格式为url参数格式或者javascript对象.  get请求会把参数添加到url后面.  [可选]
+		//javascript对象
+		//var param = new Object();
+		//对象添加属性
+		//param.name = "itcast";
+		//param.password = "123456";
+		//$.get("/AjaxServlet",param);
+		//url参数格式:name=hehe&other=yyyyss
+		//参数3:请求成功后的回调函数,回调函数的第一个参数就是返回的内容.[可选]
+		//参数4:响应的数据格式. 格式为:xml, html(等同于text), script(javascript代码), json, text(等同于html), _default。
+		//type 如果不写,使用后台response.setContentType("text/xml;charset=utf-8");,如果后台没有设置为 text.
+		/* $.get("/AjaxServlet","name=hehe&other=yyyyss",function(data){
+			console.debug(data);
+		}); */
+		
+		//简写方式:有时我们不需要传入第二参数.jquery允许我们在第二个参数的位置写上原来第三个参数位置值.
+		$.get("/AjaxServlet",function(data){
+			document.getElementById("msg").innerHTML = data;
+		},null);
+	}
+	
+	function ajaxJqueryPOST(){
+		$.post("/AjaxServlet","name=xx",function(data){
+			console.debug(data);
+		},null);
+	}
+	
+	function ajaxJqueryLoad(){
+		//load(url, [data], [callback]) 载入远程 HTML 文件代码并插入至 DOM 中。
+		//$("#msg");//获取页面中id=msg的元素,并且dom包装成jquery对象返回.
+		$("#msg").load("/AjaxServlet");
+	}
+	
+</script>
+</head>
+<body>
+	<div id="msg"></div>
+	<input type="button" value="ajax请求Load" onclick="ajaxJqueryLoad()"/>
+	<input type="button" value="ajax请求GET" onclick="ajaxJqueryGET()"/>
+	<input type="button" value="ajax请求POST" onclick="ajaxJqueryPOST()"/>
+</body>
+</html>

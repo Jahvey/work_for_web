@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Ajax入门</title>
+<script type="text/javascript">
+	function ajaxRequest(){
+		//创建一个ajax请求对象.
+		var ajax = null;
+		
+		try {
+			//W3C标准创建ajax对象方式.
+			ajax = new XMLHttpRequest();	
+		} catch (e) {
+			//IE7.0以下的浏览器以ActiveXObject组件的方式来创建,IE6中默认就有这个插件.
+			//IE6不同版本,插件名也不一样. 'MSXML2.XMLHTTP.6.0','MSXML2.XMLHTTP.5.0',
+			//'MSXML2.XMLHTTP.4.0','MSXML2.XMLHTTP.3.0',
+			//'MSXML2.XMLHTTP','Microsoft.XMLHTTP'
+			ajax = new ActiveXObject("Microsoft.XMLHTTP");
+		}
+		//指定当readyState属性改变时的事件, 请求状态改变的事件.
+		ajax.onreadystatechange=function(){
+			/**
+				readyState:请求状态
+				0 (未初始化) 对象已建立，但是尚未初始化（尚未调用open方法） 
+				1 (初始化) 对象已建立，尚未调用send方法 
+				2 (发送数据) send方法已调用，但是当前的状态及http头未知 
+				3 (数据传送中) 已接收部分数据，因为响应及http头不全，这时通过responseBody和responseText获取部分数据会出现错误， 
+				4 (完成) 数据接收完毕,此时可以通过通过responseBody和responseText获取完整的回应数据 
+			**/
+			//获取正确响应数据应该在readyState==4
+			
+			//status : http响应状态
+			if(ajax.readyState==4){
+				if(ajax.status==200){
+					//responseText : 后台响应文本数据
+					var text = ajax.responseText;
+					document.getElementById("serverTime").innerHTML=text;	
+				}else{
+					alert("error...");
+				}
+					
+			}
+		}; 
+		//创建http请求
+		//参数1:请求方式 GET/POST
+		//参数2:请求URL
+		//参数3:请求是否为异步方式,默认为true(异步),false(同步),ajax都使用异步.
+		ajax.open("post","/AjaxServlet",true);
+		//注意:setRequestHeader方式应该在open之后
+		//设置请求内容的类型.
+		ajax.setRequestHeader("Content-Type","application/x-www-form-urlencoded"); 
+		//发送http请求
+		//如果ajax使用同步请求,该方法会等到响应完毕后才算执行完毕.
+		//如果ajax使用异步请求,该方法立刻执行完毕.
+		//参数1:请求发送的数据,格式为url参数形式(name=xxx&password=1111),该参数只对post请求有效,get无效因为get没有请求体. 
+		ajax.send("username=传智&password=123456s");
+		
+	}
+</script>
+</head>
+<body>
+	<form action="/AjaxServlet" method="post" >
+		测试普通表单提交的content-type:<input type="text" name="username"/>
+		<input type="submit" value="提交"/>
+	</form>
+
+	<div id="serverTime"></div>
+	<input type="button" value="ajax请求" onclick="ajaxRequest()"/>
+</body>
+</html>
