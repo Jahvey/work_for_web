@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>全选的测试</title>
+		<script src="js/vue.js"></script>
+			<script type="text/javascript">
+			var goodsObj = [{
+					name: '大胖的店',
+					checked: false,
+					list: [{
+							name: '麻辣二胖',
+							price: 23.00,
+							realStock: 10,
+							fare: 1.5,
+							num: 1,
+							checked: false,
+						},
+
+						{
+							name: '香辣二胖',
+							price: 21.00,
+							realStock: 2,
+							fare: 1.5,
+							num: 2,
+							checked: false,
+						},
+
+						{
+							name: '红烧二胖',
+							price: 88.00,
+							realStock: 8,
+							fare: 1.5,
+							num: 4,
+							checked: false,
+						}
+					]
+				},
+
+				{
+					name: '二胖的店',
+					checked: false,
+					list: [{
+							name: '漂亮的裙子',
+							price: 166.00,
+							realStock: 10,
+							fare: 2,
+							num: 1,
+							checked: false,
+						},
+
+						{
+							name: '漂亮的短袖',
+							price: 188.00,
+							realStock: 2,
+							fare: 1.5,
+							num: 2,
+							checked: false,
+						},
+
+						{
+							name: '漂亮的鞋子',
+							price: 299.00,
+							realStock: 1,
+							fare: 3,
+							num: 1,
+							checked: false,
+						}
+					]
+				},
+
+				{
+					name: '胖胖的店',
+					checked: false,
+					list: [{
+							name: '福满多',
+							price: 3.00,
+							realStock: 10,
+							fare: .5,
+							num: 10,
+							checked: false,
+						},
+
+						{
+							name: '精品卫龙',
+							price: 1.50,
+							realStock: 2,
+							fare: 2,
+							num: 2,
+							checked: false,
+						},
+
+						{
+							name: '周长江',
+							price: 2.50,
+							realStock: 3,
+							fare: 5,
+							num: 2,
+							checked: false,
+						}
+					]
+				},
+			];
+		</script>
+		<script src="js/demo_template_code2.js"></script>
+		<style type="text/css">
+			<style type="text/css">
+				* {
+				padding: 0;
+				margin: 0;
+			}
+			
+			a {
+				color: #333;
+				text-decoration: none;
+			}
+			
+			.goods-item {
+				display: block;
+			}
+			
+			.store-item {
+				margin-bottom: 20px;
+			}
+		</style>
+
+	</head>
+
+<!--
+	作者：offline
+	时间：2018-10-10
+	描述：不允许直接将vue的代码挂载在body上面
+-->
+	<body id="app-100">
+		
+		<!--<div id="app-100">-->
+		
+		
+		<div v-for="(index1, item) in goodsObj" class="store-item">
+			<p>
+				<span v-html="item.name"></span>
+				<label>
+      <input type="checkbox" name="all" v-on:click="chooseShopGoods(index1)" v-model="item.checked" />
+      <span>全选</span>
+    </label>
+			</p>
+			<a href="javascript:;" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" v-for="(index, data) in item.list" class="goods-item">
+				<input type="checkbox" v-model="data.checked" v-on:click="choose(index1, index)" /> 商品名称:
+				<span v-html="data.name"></span> | 价格:
+				<span v-html="data.price"></span>
+			</a>
+		</div>
+		
+		<!--</div>-->
+		
+		<label>
+  <input type="checkbox" name="all" v-on:click="chooseAllGoods()" v-model="allChecked" />
+  <span>全选</span>
+</label>
+
+	
+	</body>
+
+</html>
