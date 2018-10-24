@@ -1,0 +1,16 @@
+------鲁大师 Build V5.15.18.1060------
+
+电脑型号: 联想 ThinkPad L450 笔记本电脑
+操作系统: Windows 10 专业版 64位
+
+  处理器: 英特尔 Core i5-5200U @ 2.20GHz 双核
+    主板: 联想 Intel powered classmate PC
+    内存: 12 GB ( 三星 DDR3L 1600MHz / 金士顿 DDR3L 1600MHz )
+  主硬盘: 闪迪 Ultra II 240GB ( 240 GB / 固态硬盘 )
+    显卡: 英特尔 HD Graphics 5500 ( 128 MB / 联想 )
+  显示器: 联想 LEN40A0 ( 14 英寸  )
+    声卡: 瑞昱  @ 英特尔 High Definition Audio Controller
+    网卡: 英特尔 Ethernet Connection  I218-V / FFFFFFFF
+	
+	
+	

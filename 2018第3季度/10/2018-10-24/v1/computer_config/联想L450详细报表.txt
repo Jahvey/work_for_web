@@ -1,0 +1,264 @@
+--------[ 鲁大师 ]--------------------------------------------------------------------------------
+
+  软件:             鲁大师 5.15.18.1060
+  时间:             2018-10-24 10:39:12
+  网站:             http://www.ludashi.com
+
+--------[ 概览 ]----------------------------------------------------------------------------------
+
+  电脑型号            联想 ThinkPad L450 笔记本电脑
+  操作系统            Windows 10 专业版 64位 ( DirectX 12 )
+
+  处理器              英特尔 Core i5-5200U @ 2.20GHz 双核
+  主板                联想 Intel powered classmate PC ( 英特尔 Broadwell-U - 5th Generation Intel Core Premium SKU - 9CC3 笔记本芯片组 )
+  显卡                英特尔 HD Graphics 5500 ( 128 MB / 联想 )
+  内存                12 GB ( 三星 DDR3L 1600MHz / 金士顿 DDR3L 1600MHz )
+  主硬盘              闪迪 Ultra II 240GB ( 240 GB / 固态硬盘 )
+  显示器              联想 LEN40A0 ( 14 英寸  )
+  声卡                瑞昱  @ 英特尔 High Definition Audio Controller
+  网卡                英特尔 Ethernet Connection  I218-V / FFFFFFFF
+
+--------[ 主板 ]----------------------------------------------------------------------------------
+
+  主板型号            联想 Intel powered classmate PC
+  芯片组              英特尔 Broadwell-U - 5th Generation Intel Core Premium SKU - 9CC3 笔记本芯片组
+  序列号              L1HF5CX02EX
+  主板版本            Not Defined
+  BIOS版本            联想 JDET55WW (1.17 )  /  BIOS程序发布日期: 2015年11月20日
+  BIOS的大小          16384 KB
+
+
+--------[ 处理器 ]--------------------------------------------------------------------------------
+
+  处理器              英特尔 Core i5-5200U @ 2.20GHz 双核
+  速度                2.20 GHz (100 MHz x 22.0)
+  处理器数量          核心数: 2 / 线程数: 4
+  核心代号            Broadwell
+  生产工艺            14 纳米
+  插槽/插座           Socket BGA1168
+  一级数据缓存        2 x 32 KB, 8-Way, 64 byte lines
+  一级代码缓存        2 x 32 KB, 8-Way, 64 byte lines
+  二级缓存            2 x 256 KB, 8-Way, 64 byte lines
+  三级缓存            3 MB, 12-Way, 64 byte lines
+  特征                MMX, SSE, SSE2, SSE3, SSSE3, SSE4.1, SSE4.2, HTT, EM64T, EIST, Turbo Boost
+
+--------[ 硬盘 ]----------------------------------------------------------------------------------
+
+  产品                闪迪  Ultra II 240GB (固态硬盘)
+  大小                240 GB
+  硬盘已使用          共 1511 次，累计 8774 小时
+  固件                X41100RL
+  接口                SATA III
+  数据传输率          600.00 MB/秒
+  特征                S.M.A.R.T,  APM,  48-bit LBA,  NCQ
+
+--------[ 内存 ]----------------------------------------------------------------------------------
+
+  ChannelA-DIMM0      金士顿 DDR3L 1600MHz 8GB
+  制造日期            2016 年 03月
+  型号                7F98 99U5428-018.A00LF
+  序列号              072489C1
+  厂商                Kingston
+  模块位宽:           64 Bits
+  模块电压:           SSTL 1.35V
+
+  ChannelB-DIMM0      三星 DDR3L 1600MHz 4GB
+  制造日期            2015 年 11月
+  型号                CE M471B5173EB0-YK0
+  序列号              14156D2E
+  厂商                SAMSUNG
+  模块位宽:           64 Bits
+  模块电压:           SSTL 1.35V
+
+--------[ 显卡 ]----------------------------------------------------------------------------------
+
+  主显卡              英特尔 HD Graphics 5500
+  显存                128 MB
+  制造商              联想
+  制造商              Intel
+  BIOS日期            10/16/20 (非显卡制造日期)
+  驱动版本            20.19.15.4568
+  驱动日期            2016年12月16日
+
+--------[ 显示器 ]--------------------------------------------------------------------------------
+
+  产品                联想 LEN40A0
+  厂商                联想
+  固件程序日期        2014 年 (非显示器制造日期)
+  屏幕尺寸            14 英寸 (31 厘米 x 17 厘米)
+  显示比例            宽屏 16 : 9
+  分辨率              1366 x 768 32 位真彩色
+  Gamma               2.20
+  电源管理            Standby, Suspend, Active-Off
+  最大分辨率          1366 x 768
+
+--------[ 其他设备 ]------------------------------------------------------------------------------
+
+
+  网卡                英特尔 Ethernet Connection  I218-V
+  制造商              FFFFFFFF
+
+  无线网卡            英特尔 Wireless-N 7265
+
+  声卡                瑞昱  @ 英特尔 High Definition Audio Controller
+
+  键盘                PS/2 标准键盘
+  鼠标                HID-compliant 鼠标
+  鼠标                Synaptics 指点杆
+
+  摄像头              Integrated Camera
+
+--------[ PCI设备 ]-------------------------------------------------------------------------------
+
+  设备                Broadwell-U Host Bridge
+  设备ID              1604
+  制造商              Intel
+  制造商ID            8086
+  类别                Bridge / PCI to HOST
+  子系统制造商        Lenovo
+  子系统ID            503C17AA
+
+  设备                HD Graphics 5500
+  设备ID              1616
+  制造商              Intel
+  制造商ID            8086
+  类别                Display / VGA
+  子系统制造商        Lenovo
+  子系统ID            503C17AA
+
+  设备                USB xHCI Controller
+  设备ID              9CB1
+  制造商              Intel
+  制造商ID            8086
+  类别                Serial / USB (UHCI)
+  子系统制造商        Lenovo
+  子系统ID            503C17AA
+
+  设备                Management Engine Interface
+  设备ID              9CBA
+  制造商              Intel
+  制造商ID            8086
+  类别                Simple Communication / Other
+  子系统制造商        Lenovo
+  子系统ID            503C17AA
+
+  设备                Ethernet Connection  I218-V
+  设备ID              15A3
+  制造商              Intel
+  制造商ID            8086
+  类别                Network / Ethernet
+  子系统制造商        未知(FFFFFFFFh)
+  子系统ID            FFFFFFFF
+
+  设备                High Definition Audio Controller
+  设备ID              9CA0
+  制造商              Intel
+  制造商ID            8086
+  类别                Multimedia / Hi-definition Audio
+  子系统制造商        Lenovo
+  子系统ID            503C17AA
+
+  设备                Mobile 5th Generation Intel Core PCI Express Root Port #1 - 9C90
+  设备ID              9C90
+  制造商              Intel
+  制造商ID            8086
+  类别                Bridge / PCI to PCI
+  子系统ID            00000000
+
+  设备                Mobile 5th Generation Intel Core PCI Express Root Port #3 - 9C94
+  设备ID              9C94
+  制造商              Intel
+  制造商ID            8086
+  类别                Bridge / PCI to PCI
+  子系统ID            00000000
+
+  设备                Mobile 5th Generation Intel Core PCI Express Root Port #6 - 9C9A
+  设备ID              9C9A
+  制造商              Intel
+  制造商ID            8086
+  类别                Bridge / PCI to PCI
+  子系统ID            00000000
+
+  设备                Mobile 5th Generation Intel Core USB EHCI Controller - 9CA6
+  设备ID              9CA6
+  制造商              Intel
+  制造商ID            8086
+  类别                Serial / USB 2.0 (EHCI)
+  子系统制造商        Lenovo
+  子系统ID            503C17AA
+
+  设备                Mobile 5th Generation Intel Core Premium SKU LPC Controller - 9CC3
+  设备ID              9CC3
+  制造商              Intel
+  制造商ID            8086
+  类别                Bridge / PCI to ISA
+  子系统制造商        Lenovo
+  子系统ID            503C17AA
+
+  设备                Wildcat Point-LP SATA Controller
+  设备ID              9C83
+  制造商              Intel
+  制造商ID            8086
+  类别                Storage / Serial ATA (AHCI 1.0)
+  子系统制造商        Lenovo
+  子系统ID            503C17AA
+
+  设备                Wildcat Point-LP SMBus Controller
+  设备ID              9CA2
+  制造商              Intel
+  制造商ID            8086
+  类别                Serial / SMBus Controller
+  子系统制造商        Lenovo
+  子系统ID            503C17AA
+
+  设备                Wildcat Point-LP Thermal Management Controller
+  设备ID              9CA4
+  制造商              Intel
+  制造商ID            8086
+  类别                Data Aquisition & Signal Processing / Other
+  子系统制造商        Lenovo
+  子系统ID            503C17AA
+
+  设备                Wireless-N 7265
+  设备ID              095B
+  制造商              Intel
+  制造商ID            8086
+  类别                Network / Other
+  子系统制造商        Intel
+  子系统ID            52028086
+
+  设备                Realtek PCIE CardReader
+  设备ID              5227
+  制造商              Realtek
+  制造商ID            10EC
+  类别                 / 
+  子系统制造商        Lenovo
+  子系统ID            503C17AA
+
+--------[ USB设备 ]-------------------------------------------------------------------------------
+
+  制造商ID            17EF
+  产品ID              6050
+  类别                0 / 0 / 0
+  设备                ? Lenovo Precision USB Mouse
+  Serial              ?
+  版本                USB 2.0
+
+  制造商ID            8087
+  产品ID              0A2A
+  类别                224 / 1 / 1
+  设备                 
+
+  制造商ID            04F2
+  产品ID              B444
+  类别                239 / 2 / 1
+  设备                 
+  版本                USB 2.0
+
+--------[ 传感器 ]--------------------------------------------------------------------------------
+
+  CPU温度             76℃
+  CPU核心             75℃
+  CPU封装             77℃
+  硬盘温度            36℃
+
