@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>ajax01 first</title>
+		<script src="../js/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript">
+		var xmlHttpReq=null;
+		function ajax(){
+			
+			
+			if(window.ActiveXObject){
+				
+				xmlHttpReq=new ActiveXObject("Microsoft.XMLHTTP");
+			}else if(window.XMLHttpRequest){
+				
+				
+				xmlHttpReq=new XMLHttpRequest();
+			}
+			alert(xmlHttpReq.request)
+			xmlHttpReq.open("get","http://127.0.0.1/index.php",true);
+			
+			xmlHttpReq.onreadystatechange=RequestCallBack;
+			
+			xmlHttpReq.send(null);
+		}
+		
+		function RequestCallBack(){
+			
+			if(xmlHttpReq.readyState==4){
+				
+				if(xmlHttpReq.status==200){
+					
+					document.getElementById("resultText").innerHTML=xmlHttpReq.response;
+				}
+			}
+		}
+	</script>
+	</head>
+	<body>
+		
+		<input type="button" value="提交" onclick="ajax();" /><br/>
+		<div id="resultText"></div>
+		
+	</body>
+</html>

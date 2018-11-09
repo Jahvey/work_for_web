@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>jquery 的load()方法 ajax异步加载数据</title>
+		<script src="../js/jquery-3.1.1.min.js"></script>
+		<script type="text/javascript">
+			
+			$(function(){
+				
+				$("#send").click(function(){
+					
+					
+					//$("#resultText").load("test.html");
+					//$("#resultText").load("test.html .para");
+					//可以使用url空格select的方式筛选要添加的数据
+					$("#resultText").load("test.html");
+					
+				});
+				
+				
+				
+			})
+			
+		</script>
+	</head>
+	<body>
+		<input type="button" value="Ajax load()" id="send" />
+		<div class="comment">已有评论：</div>
+		<div id="resultText"></div>
+		
+	</body>
+</html>
